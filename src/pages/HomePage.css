@@ -1,0 +1,44 @@
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-40);
+}
+
+.home-hero {
+  max-width: 560px;
+  text-align: center;
+}
+
+.home-headline {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin: 0 0 var(--space-24) 0;
+  color: var(--color-text);
+}
+
+.home-sub {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  margin: 0 0 var(--space-40) 0;
+  line-height: 1.6;
+}
+
+.home-cta {
+  display: inline-block;
+  padding: var(--space-16) var(--space-40);
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.home-cta:hover {
+  opacity: 0.92;
+  text-decoration: none;
+}

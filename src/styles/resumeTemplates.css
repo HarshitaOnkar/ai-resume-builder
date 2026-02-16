@@ -1,0 +1,106 @@
+/* Resume template layouts + accent (--resume-accent set on shell) */
+
+/* Classic: single-column, serif headings, horizontal rules between sections */
+.resume-preview-shell.template-classic .resume-shell-h2,
+.preview-resume.template-classic .preview-h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--resume-accent, #333);
+  padding-bottom: var(--space-8);
+}
+
+.resume-preview-shell.template-classic .resume-shell-header,
+.preview-resume.template-classic .preview-header {
+  border-bottom: 1px solid var(--resume-accent, #333);
+}
+
+/* Modern: two-column, colored left sidebar (contact + skills), main right */
+.resume-preview-shell.template-modern .resume-shell-modern-wrap,
+.preview-resume.template-modern .preview-modern-wrap {
+  display: flex;
+  min-height: 320px;
+}
+
+.resume-preview-shell.template-modern .resume-shell-sidebar,
+.preview-resume.template-modern .preview-sidebar {
+  width: 32%;
+  padding: var(--space-24);
+  background: var(--resume-accent, hsl(168, 60%, 40%));
+  color: #fff;
+}
+
+.resume-preview-shell.template-modern .resume-shell-sidebar .resume-shell-name,
+.preview-resume.template-modern .preview-sidebar .preview-name {
+  color: #fff;
+}
+
+.resume-preview-shell.template-modern .resume-shell-sidebar .resume-shell-contact,
+.preview-resume.template-modern .preview-sidebar .preview-contact {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.resume-preview-shell.template-modern .resume-shell-sidebar .resume-shell-h2,
+.preview-resume.template-modern .preview-sidebar .preview-h2 {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+}
+
+.resume-preview-shell.template-modern .resume-shell-sidebar .resume-shell-pill,
+.preview-resume.template-modern .preview-sidebar .preview-pill {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+
+.resume-preview-shell.template-modern .resume-shell-main,
+.preview-resume.template-modern .preview-main {
+  flex: 1;
+  padding: var(--space-24);
+}
+
+.resume-preview-shell.template-modern .resume-shell-main .resume-shell-h2,
+.preview-resume.template-modern .preview-main .preview-h2 {
+  color: var(--resume-accent, #333);
+  border-bottom-color: var(--resume-accent, #ccc);
+}
+
+/* Minimal: single-column, no borders/rules, generous whitespace, sans-serif */
+.resume-preview-shell.template-minimal,
+.preview-resume.template-minimal {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.resume-preview-shell.template-minimal .resume-shell-h2,
+.resume-preview-shell.template-minimal .resume-shell-name,
+.preview-resume.template-minimal .preview-h2,
+.preview-resume.template-minimal .preview-name {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.resume-preview-shell.template-minimal .resume-shell-h2,
+.preview-resume.template-minimal .preview-h2 {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: var(--space-16);
+}
+
+.resume-preview-shell.template-minimal .resume-shell-header,
+.preview-resume.template-minimal .preview-header {
+  border-bottom: none;
+  margin-bottom: var(--space-40);
+}
+
+.resume-preview-shell.template-minimal .resume-shell-section,
+.preview-resume.template-minimal .preview-section {
+  margin-bottom: var(--space-40);
+}
+
+.resume-preview-shell.template-minimal .resume-shell-h2,
+.preview-resume.template-minimal .preview-h2 {
+  color: var(--resume-accent, #111);
+}
+
+/* Accent usage (all templates): headings/borders can use --resume-accent */
+.resume-preview-shell .resume-shell-h2,
+.preview-resume .preview-h2 {
+  color: var(--resume-accent, #111);
+}

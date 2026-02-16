@@ -1,0 +1,266 @@
+/* Preview: minimal black + white only (no design-system colors) */
+.preview-page {
+  padding: var(--space-40);
+  background: var(--color-bg);
+  min-height: calc(100vh - 60px);
+}
+
+.preview-export {
+  max-width: 700px;
+  margin: 0 auto var(--space-24) auto;
+}
+
+.preview-export-buttons {
+  display: flex;
+  gap: var(--space-16);
+  flex-wrap: wrap;
+}
+
+.preview-export-btn {
+  padding: var(--space-8) var(--space-16);
+  background: var(--color-bg);
+  border: 1px solid var(--color-muted);
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.preview-export-btn:hover {
+  border-color: var(--color-text);
+}
+
+.preview-export-warning {
+  margin: var(--space-16) 0 0 0;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.preview-export-toast {
+  margin: var(--space-16) 0 0 0;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  padding: var(--space-8) var(--space-16);
+  background: #e8f5e9;
+  border-radius: 6px;
+}
+
+.preview-page-tabs {
+  max-width: 700px;
+  margin: 0 auto var(--space-24) auto;
+}
+
+.preview-resume {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-64) var(--space-40);
+  background: #fff;
+  color: #111;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  overflow-wrap: break-word;
+}
+
+.preview-resume .preview-section {
+  break-inside: avoid;
+}
+
+.preview-header {
+  margin-bottom: var(--space-24);
+  padding-bottom: var(--space-24);
+  border-bottom: 1px solid #111;
+}
+
+.preview-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 0 0 var(--space-8) 0;
+  color: #111;
+}
+
+.preview-contact {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.preview-contact span + span::before {
+  content: ' · ';
+}
+
+.preview-section {
+  margin-bottom: var(--space-24);
+}
+
+.preview-h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 var(--space-16) 0;
+  color: #111;
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid #ccc;
+}
+
+.preview-p {
+  margin: 0 0 var(--space-8) 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.preview-block {
+  margin-bottom: var(--space-16);
+}
+
+.preview-block-head {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-16);
+}
+
+.preview-block-head strong {
+  font-weight: 600;
+  color: #111;
+}
+
+.preview-block-head span {
+  color: #333;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.preview-block-sub {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: var(--space-8);
+}
+
+.preview-resume a {
+  color: #111;
+  text-decoration: underline;
+}
+
+.preview-resume a:hover {
+  color: #333;
+}
+
+.preview-empty {
+  color: #666;
+  font-style: italic;
+  margin: var(--space-24) 0 0 0;
+}
+
+.preview-project-card {
+  padding: var(--space-16);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: var(--space-16);
+}
+
+.preview-project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.preview-project-links {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.preview-link-icon {
+  font-size: 0.9rem;
+  color: #111;
+  text-decoration: none;
+}
+
+.preview-tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.preview-tech-pill {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #f0f0f0;
+  color: #333;
+}
+
+.preview-skills-groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.preview-skill-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.preview-skill-label {
+  font-size: 0.8rem;
+  color: #666;
+  margin-right: var(--space-8);
+}
+
+.preview-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.preview-pill {
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+/* Print: hide UI, resume only, white, clean margins, no cut-off */
+@media print {
+  .preview-page-tabs,
+  .preview-export {
+    display: none !important;
+  }
+
+  .preview-page {
+    padding: 0;
+    background: #fff;
+    min-height: auto;
+  }
+
+  .preview-resume,
+  .preview-resume.preview-resume-print {
+    max-width: none;
+    margin: 0;
+    padding: 1.5cm 1.25cm;
+    box-shadow: none;
+    background: #fff;
+    color: #111;
+  }
+
+  .preview-resume * {
+    color: #111 !important;
+    background: transparent !important;
+  }
+
+  .preview-resume a {
+    color: #111;
+  }
+
+  .preview-block {
+    page-break-inside: avoid;
+  }
+
+  .preview-section {
+    page-break-inside: avoid;
+  }
+}

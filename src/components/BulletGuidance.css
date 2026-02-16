@@ -1,0 +1,17 @@
+.bullet-guidance {
+  margin-top: var(--space-8);
+}
+
+.bullet-guidance-item {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-bottom: var(--space-8);
+}
+
+.bullet-guidance-item:last-child {
+  margin-bottom: 0;
+}
+
+.bullet-guidance-tip {
+  font-style: italic;
+}

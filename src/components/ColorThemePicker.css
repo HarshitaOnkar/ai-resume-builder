@@ -1,0 +1,29 @@
+.color-theme-picker {
+  margin-bottom: var(--space-16);
+}
+
+.color-theme-picker-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-bottom: var(--space-8);
+}
+
+.color-theme-picker-swatches {
+  display: flex;
+  gap: var(--space-12);
+  flex-wrap: wrap;
+}
+
+.color-theme-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--color-muted);
+  padding: 0;
+  cursor: pointer;
+}
+
+.color-theme-swatch:hover {
+  transform: scale(1.1);
+}

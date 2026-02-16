@@ -1,0 +1,60 @@
+.rb-step-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.rb-step-content {
+  flex: 1;
+}
+
+.rb-step-placeholder {
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.rb-step-placeholder strong {
+  color: var(--color-text);
+}
+
+.rb-step-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-16) 0;
+  border-top: 1px solid var(--color-muted);
+}
+
+.rb-step-nav-pad {
+  width: 6rem;
+}
+
+.rb-step-nav-btn {
+  padding: var(--space-8) var(--space-16);
+  background: var(--color-bg);
+  border: 1px solid var(--color-muted);
+  border-radius: 6px;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.rb-step-nav-btn:hover {
+  border-color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.rb-step-nav-next {
+  min-width: 6rem;
+  text-align: center;
+}
+
+.rb-step-nav-label {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.rb-step-nav-gate {
+  color: var(--color-muted);
+  font-style: italic;
+}

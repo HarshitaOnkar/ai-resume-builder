@@ -1,0 +1,53 @@
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.app-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-16) var(--space-40);
+  border-bottom: 1px solid var(--color-muted);
+  flex-shrink: 0;
+}
+
+.app-nav-brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.app-nav-brand:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.app-nav-links {
+  display: flex;
+  gap: var(--space-24);
+}
+
+.app-nav-link {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.app-nav-link:hover {
+  color: var(--color-text);
+}
+
+.app-nav-link.active {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.app-main {
+  flex: 1;
+  overflow: auto;
+}

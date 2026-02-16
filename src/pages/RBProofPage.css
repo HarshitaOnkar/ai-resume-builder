@@ -1,0 +1,150 @@
+.rb-proof-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-40);
+}
+
+.rb-proof-section h3 {
+  margin: 0 0 var(--space-16) 0;
+  font-size: 1.25rem;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
+
+.rb-proof-step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rb-proof-step-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8) 0;
+  color: var(--color-muted);
+}
+
+.rb-proof-step-list li.done {
+  color: var(--color-text);
+}
+
+.rb-proof-step-list li.pending {
+  color: var(--color-muted);
+}
+
+.rb-proof-step-icon {
+  font-size: 1.1rem;
+}
+
+.rb-proof-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.rb-proof-inputs label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.rb-proof-inputs label span {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.rb-proof-inputs input {
+  padding: var(--space-8) var(--space-16);
+  background: var(--color-bg);
+  border: 1px solid var(--color-muted);
+  border-radius: 6px;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.rb-proof-inputs input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.rb-proof-inputs input::placeholder {
+  color: var(--color-muted);
+}
+
+.rb-proof-actions {
+  padding-top: var(--space-16);
+}
+
+.rb-proof-copy-btn {
+  padding: var(--space-16) var(--space-24);
+  background: var(--color-accent);
+  border: none;
+  border-radius: 6px;
+  color: var(--color-bg);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.rb-proof-copy-btn:hover {
+  opacity: 0.9;
+}
+
+.rb-proof-shipped-message {
+  margin: 0 0 var(--space-24) 0;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.rb-proof-input-invalid {
+  border-color: #c62828 !important;
+}
+
+.rb-proof-input-error {
+  font-size: 0.8rem;
+  color: #c62828;
+  margin-top: var(--space-4);
+}
+
+.rb-proof-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rb-proof-checklist li {
+  padding: var(--space-4) 0;
+}
+
+.rb-proof-checklist li.pending {
+  color: var(--color-muted);
+}
+
+.rb-proof-checklist li.done {
+  color: var(--color-text);
+}
+
+.rb-proof-checklist-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  width: 100%;
+  text-align: left;
+  padding: var(--space-8) 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: inherit;
+}
+
+.rb-proof-checklist-btn:hover {
+  color: var(--color-accent);
+}
+
+.rb-proof-checklist-btn[aria-pressed="true"] {
+  font-weight: 500;
+}

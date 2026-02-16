@@ -1,0 +1,122 @@
+.projects-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+  margin-bottom: var(--space-16);
+}
+
+.project-accordion-item {
+  border: 1px solid var(--color-muted);
+  border-radius: 6px;
+  margin-bottom: var(--space-16);
+  overflow: hidden;
+}
+
+.project-accordion-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-16);
+  background: var(--color-bg);
+  cursor: pointer;
+}
+
+.project-accordion-head:hover {
+  background: #f0efec;
+}
+
+.project-accordion-title {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.project-accordion-toggle {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+
+.project-accordion-body {
+  padding: var(--space-16);
+  border-top: 1px solid var(--color-muted);
+}
+
+.project-char-count {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-top: var(--space-8);
+}
+
+.project-tech-block {
+  border: 1px solid var(--color-muted);
+  border-radius: 6px;
+  padding: var(--space-8);
+  background: var(--color-bg);
+}
+
+.project-tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.project-tech-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  background: #fff;
+  border: 1px solid var(--color-muted);
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.project-tech-pill-remove {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--color-muted);
+}
+
+.project-tech-pill-remove:hover {
+  color: var(--color-text);
+}
+
+.project-tech-input {
+  width: 100%;
+  padding: var(--space-8) 0;
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.project-tech-input::placeholder {
+  color: var(--color-muted);
+}
+
+.project-delete-btn {
+  margin-top: var(--space-16);
+  padding: 0;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.project-delete-btn:hover {
+  color: var(--color-accent);
+}
+
+.projects-empty {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}

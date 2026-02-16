@@ -1,0 +1,22 @@
+.proof-page {
+  padding: var(--space-40);
+  min-height: calc(100vh - 60px);
+}
+
+.proof-placeholder {
+  max-width: 480px;
+}
+
+.proof-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  margin: 0 0 var(--space-16) 0;
+  color: var(--color-text);
+}
+
+.proof-desc {
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.6;
+}

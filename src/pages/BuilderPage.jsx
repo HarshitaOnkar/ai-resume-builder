@@ -1,16 +1,7 @@
-import { useState } from 'react';
 import { useResume } from '../context/ResumeContext';
-import ResumePreviewShell from '../components/ResumePreviewShell';
-import ATSScoreMeter from '../components/ATSScoreMeter';
-import ImprovementPanel from '../components/ImprovementPanel';
-import TemplatePicker from '../components/TemplatePicker';
-import ColorThemePicker from '../components/ColorThemePicker';
 import BulletGuidance from '../components/BulletGuidance';
 import SkillsSection from '../components/SkillsSection';
 import ProjectsSection from '../components/ProjectsSection';
-import { getStoredTemplate } from '../lib/templateStorage';
-import { getStoredTheme } from '../lib/themeStorage';
-import '../styles/resumeTemplates.css';
 import './BuilderPage.css';
 
 function FormSection({ title, children }) {
@@ -53,8 +44,6 @@ function EditableEntry({ entry, onChange, onRemove, fields }) {
 }
 
 export default function BuilderPage() {
-  const [template, setTemplate] = useState(getStoredTemplate);
-  const [theme, setTheme] = useState(getStoredTheme);
   const {
     resume,
     updatePersonal,
@@ -67,11 +56,10 @@ export default function BuilderPage() {
     updateExperience,
     addExperience,
     removeExperience,
-    updateLinks,
     loadSampleData,
   } = useResume();
 
-  const { personal, summary, links } = resume;
+  const { personal, summary } = resume;
 
   return (
     <div className="builder-page">
@@ -202,42 +190,7 @@ export default function BuilderPage() {
         <ProjectsSection />
 
         <SkillsSection />
-
-        <FormSection title="Links">
-          <label className="builder-label">
-            <span>GitHub</span>
-            <input
-              type="url"
-              value={links.github}
-              onChange={(e) => updateLinks('github', e.target.value)}
-              placeholder="https://github.com/..."
-              className="builder-input"
-            />
-          </label>
-          <label className="builder-label">
-            <span>LinkedIn</span>
-            <input
-              type="url"
-              value={links.linkedin}
-              onChange={(e) => updateLinks('linkedin', e.target.value)}
-              placeholder="https://linkedin.com/in/..."
-              className="builder-input"
-            />
-          </label>
-        </FormSection>
       </div>
-
-      <aside className="builder-preview-col">
-        <div className="builder-preview-sticky">
-          <ATSScoreMeter resume={resume} />
-          <ImprovementPanel resume={resume} />
-          <h3 className="builder-preview-title">Template</h3>
-          <TemplatePicker value={template} onChange={setTemplate} />
-          <ColorThemePicker value={theme} onChange={setTheme} />
-          <h3 className="builder-preview-title">Live preview</h3>
-          <ResumePreviewShell resume={resume} template={template} theme={theme} />
-        </div>
-      </aside>
     </div>
   );
 }

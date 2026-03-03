@@ -4,7 +4,6 @@ import './AppLayout.css';
 const navItems = [
   { path: '/builder', label: 'Builder' },
   { path: '/preview', label: 'Preview' },
-  { path: '/proof', label: 'Proof' },
 ];
 
 export default function AppLayout() {
